@@ -4,45 +4,45 @@ const navPaths = [
     path: "#home",
     icon: "/assets/icons/house.svg",
     alt: "house",
-    translate: "-46px"
+    translate: "46"
   },
   {
     name: "Projects",
     path: "#projects",
     icon: "/assets/icons/code.png",
     alt: "laptop with code symbol",
-    translate: "-62px"
+    translate: "62"
   },
   {
     name: "About",
     path: "#about",
     icon: "/assets/icons/user.png",
     alt: "user",
-    translate: "-50px"
+    translate: "50"
   },
   {
     name: "Resume",
     path: "#resume",
     icon: "/assets/icons/document.png",
     alt: "document",
-    translate: "-64px"
+    translate: "64"
   },
   {
     name: "Contact",
     path: "#contact",
     icon: "/assets/icons/mail.png",
     alt: "envelop",
-    translate: "-60px"
+    translate: "60"
   },
 ];
 
 export default function Navbar() {
   return (
-    <nav>
+    <nav className="fixed">
       <ul className="mt-3">
         {navPaths.map((item, index) => (
           <li key={index} className="mb-3 ">
-            <a href={item.path} className={`flex items-center transition-transform transform translate-x-[${item.translate}] hover:translate-x-0 hover:ml-3`}>
+            <a href={item.path} className={`flex items-center transition-transform transform translate-x-[-${item.translate}px] hover:translate-x-0 hover:ml-3`}>
               {item.name}
               <img src={item.icon} alt={item.alt} className="ml-2" />
             </a>
