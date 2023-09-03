@@ -1,27 +1,25 @@
-import Image from "next/image";
-
 export default function Hero() {
   return (
     <>
-      {/* <section class="relative">
-        <img
-          src="/assets/images/hero.jpg"
-          alt="Background Image"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          className="z-10"
-        />
-        <div class="z-50 mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
-          <div class="mx-auto max-w-3xl text-center">
+      <div
+        className="relative overflow-hidden bg-cover bg-no-repeat"
+        style={{
+          backgroundPosition: "50%",
+          backgroundImage:
+            "url('./assets/images/hero.jpg')",
+          height: "500px",
+        }}
+      >
+
+        <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed">
+          <div className="flex h-full items-center justify-center">
+            <div className="px-6 text-center text-white md:px-12">
             <h1 class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
               Hi, I'm Arely
             </h1>
-
             <p class="mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
               I'm a Full Stack Developer from Los Angeles, CA
             </p>
-
             <div class="mt-8 flex flex-wrap justify-center gap-4">
               <a
                 class="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
@@ -37,9 +35,10 @@ export default function Hero() {
                 Learn More
               </a>
             </div>
+            </div>
           </div>
-        </div>
-      </section> */}
+        </div> 
+      </div>
     </>
   );
 }

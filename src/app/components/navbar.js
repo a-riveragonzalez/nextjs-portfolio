@@ -38,7 +38,7 @@ const navPaths = [
 
 export default function Navbar() {
   return (
-    <nav className="fixed">
+    <nav className="fixed z-50">
       <ul className="mt-3">
         {navPaths.map((item, index) => (
           <li key={index} className="mb-3 ">
